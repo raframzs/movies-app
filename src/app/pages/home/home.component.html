@@ -1,0 +1,17 @@
+<h1 class="display-4">Billboard</h1>
+<!--Billboard slider-->
+<div class="row" *ngIf="movies.length > 0">
+  <div class="col">
+    <app-slide-show [movies]="moviesSlideShow"></app-slide-show>
+  </div>
+</div>
+
+<h1 class="display-4">Movies</h1>
+<!--Movies Cards-->
+<div class="row">
+  <div class="col">
+    <app-movies-poster-grid
+      *ngIf="movies.length > 0"
+      [movies]="movies"></app-movies-poster-grid>
+  </div>
+</div>
